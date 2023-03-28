@@ -1,0 +1,67 @@
+#joystick{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 700px;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+    justify-content: center;
+    margin-top: 8vh;
+}
+
+.left{
+    background-color: rgb(233, 236, 56);
+    border-radius: 100px 0px 0px 100px;
+}
+
+
+.botoes{
+    width: auto;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    justify-content: center;
+    align-items: center;
+}
+.botaoMaior{
+    background-color: rgb(66, 66, 248);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 10px 10px 5px;
+}
+.botaoMenor{
+    width: auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 20% 20% 20%;
+    justify-content: center;
+    align-items: center;
+}
+.cima2, .baixo2, .centro1, .centro3{
+    background-color: rgb(66, 66, 248);
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 5px 7px 5px;
+    justify-content: center;
+}
+
+.center{
+    background-color: rgb(66, 66, 248);
+    
+}
+
+.rigth{
+    background-color: rgb(247, 5, 226);
+    border-radius: 0px 100px 100px 0px;
+}
+.botaoMenorRigth{
+    margin-top: 250px;
+    width: auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 20% 20% 20%;
+}
