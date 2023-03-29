@@ -3,7 +3,7 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
-
+var contador = 0
 let shuffledQuestions, currentQuestionIndex
 
 function meuMenuToggle() {
@@ -12,14 +12,6 @@ function meuMenuToggle() {
     x.style.display = "block";
   } else {
     x.style.display = "none";
-  }
-}
-function meuMenuToggle2() {
-  var x = document.getElementById("divAll");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
   }
 }
 
@@ -73,15 +65,23 @@ function selectAnswer(e) {
   })
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
-    
   } else {
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')
-    document.location.reload(true)
+    //document.location.reload(true)
+    startButton.click = true
+    console.log(contador)
+    function resultados() {
+      document.location.reload(true)
+    }
+    document.getElementById("start-btn").onclick = function() {
+      var idOriginal = this.id;
+      this.id = "start-btn";
+      idOriginal == "start-btn" ? resultados() : '';
+    };
   }
 }
 
-var contador = 0
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
@@ -95,6 +95,8 @@ function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
 }
+
+
 
 const questions = [
   {
