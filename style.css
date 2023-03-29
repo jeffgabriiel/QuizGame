@@ -1,3 +1,38 @@
+@keyframes changeBackgroundColor {
+    0% {
+        background-color: rgb(247, 5, 226);
+    }
+    25% {
+        background-color: rgb(66, 66, 248);
+    }
+    50% {
+        background-color: rgb(233, 236, 56);
+    }
+    75% {
+        background-color: rgb(66, 66, 248);
+    }
+    100% {
+        background-color: rgb(247, 5, 226);
+    }
+}
+
+h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+    color: black;
+}
+.title{
+    height: auto;
+    margin: 0px 45% 0px 45%;
+    border: 2px solid black;
+    border-radius: 10px;
+    animation: changeBackgroundColor 2s infinite;
+}
 #joystick{
     display: grid;
     grid-template-columns: 20% 60% 20%;
@@ -6,12 +41,12 @@
     margin-right: 10%;
     position: relative;
     justify-content: center;
-    margin-top: 8vh;
+    margin-top: 5vh;
 }
 
 .left{
     background-color: rgb(233, 236, 56);
-    border-radius: 100px 0px 0px 100px;
+    border-radius: 150px 0px 0px 150px;
 }
 
 
@@ -48,14 +83,9 @@
     justify-content: center;
 }
 
-.center{
-    background-color: rgb(66, 66, 248);
-    
-}
-
 .rigth{
     background-color: rgb(247, 5, 226);
-    border-radius: 0px 100px 100px 0px;
+    border-radius: 0px 150px 150px 0px;
 }
 .botaoMenorRigth{
     margin-top: 250px;
@@ -64,4 +94,20 @@
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 20% 20% 20%;
+}
+
+.center{
+    background-color: rgb(66, 66, 248);
+}
+.tela{
+    height: 650px;
+    margin: 20px 20px 20px 20px;
+    display: grid;
+    grid-template-rows: 30% 70%;
+    text-align: center;
+    justify-content: center;
+}
+
+h1{
+    color:  rgb(233, 236, 56);
 }

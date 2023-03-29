@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizGame</title>
+    <title>Quiz Game</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="title">
+        <h2>WazlaQUIZ</h2>
+    </div>
+    
     <section id="joystick">
+        
         <div class="left">
             <div class="botoes">
                 <div class="botaoMaior">
@@ -32,7 +37,17 @@
 
         <div class="center">
             <div class="tela">
-
+                <div class="questao">
+                    <h1>Questão elaborada?</h1>
+                </div>
+                <div class="respostas">
+                    <ol type='A' id='alternativas'>
+                        <li id='a' value='1A' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='b' value='1B' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='c' value='1C' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='d' value='1D' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                    </ol>
+                </div>
             </div>
         </div>
 
@@ -55,9 +70,10 @@
                 <div class="botaoMaior">
 
                 </div>
-                
             </div>
         </div>
     </section>
 </body>
+
+<script src="app.js"></script>
 </html>
