@@ -5,15 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Game</title>
+    <script defer src="app.js"></script>
     <link rel="stylesheet" href="./style.css">
+
+    <script>
+        function meuMenuToggle() {
+          var x = document.getElementById("divAll");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        </script>
 </head>
 <body>
-    <div class="title">
-        <h2>WazlaQUIZ</h2>
-    </div>
     
     <section id="joystick">
-        
         <div class="left">
             <div class="botoes">
                 <div class="botaoMaior">
@@ -36,19 +44,23 @@
         </div>
 
         <div class="center">
-            <div class="tela">
-                <div class="questao">
-                    <h1>Questão elaborada?</h1>
+            <div class="container">
+                <div id="question-container" class="hide">
+
+                    <div class="animacao" id="divAll">
+                        <div class="title">
+                            <h2>WazlaQUIZ</h2>
+                        </div>
+                        <div class="imagem">
+                            <img src="./img/Wazla.png" alt="">
+                        </div>
+                    </div>
+
+                  <div id="question"></div>
+                  <div id="answer-buttons" class="btn-grid"></div>
                 </div>
-                <div class="respostas">
-                    <ol type='A' id='alternativas'>
-                        <li id='a' value='1A' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
-                        <li id='b' value='1B' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
-                        <li id='c' value='1C' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
-                        <li id='d' value='1D' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
-                    </ol>
-                </div>
-            </div>
+              </div>
+            </body>
         </div>
 
         <div class="rigth">
@@ -68,7 +80,10 @@
                 </div>
 
                 <div class="botaoMaior">
-
+                    <div class="controls">
+                        <button id="start-btn" class="start-btn btn" onclick="meuMenuToggle()">Start</button>
+                        <button id="next-btn" class="next-btn btn hide">Next</button>
+                    </div>
                 </div>
             </div>
         </div>

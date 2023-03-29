@@ -78,26 +78,28 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'What is 2 + 2?',
+    question: 'Ciências puras também pode ser chamada de: ',
     answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
+      { text: 'Ciências fundamentais', correct: true },
+      { text: '22', correct: false },
+      { text: 'Um no', correct: false },
+      { text: 'IDK', correct: false }
     ]
   },
   {
-    question: 'Who is the best YouTuber?',
+    question: 'As ciências puras... ',
     answers: [
-      { text: 'Web Dev Simplified', correct: true },
-      { text: 'Traversy Media', correct: true },
-      { text: 'Dev Ed', correct: true },
-      { text: 'Fun Fun Function', correct: true }
+      { text: 'Web Dev Simplified', correct: false },
+      { text: 'Traversy Media', correct: false },
+      { text: 'Dev Ed', correct: false },
+      { text: 'estudam os conceitos básicos do conhecimento sem preocupação com sua imediata aplicação', correct: true }
     ]
   },
   {
-    question: 'Is web development fun?',
+    question: 'As ciências puras podem ser ser: ',
     answers: [
       { text: 'Kinda', correct: false },
-      { text: 'YES!!!', correct: true },
+      { text: 'Empíricas e formais.', correct: true },
       { text: 'Um no', correct: false },
       { text: 'IDK', correct: false }
     ]
@@ -106,7 +108,9 @@ const questions = [
     question: 'What is 4 * 2?',
     answers: [
       { text: '6', correct: false },
-      { text: '8', correct: true }
+      { text: '8', correct: true },
+      { text: 'Um no', correct: false },
+      { text: 'IDK', correct: false }
     ]
   }
 ]
