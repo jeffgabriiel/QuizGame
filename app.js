@@ -117,14 +117,12 @@ const questions = [
       { text: 'Ciências fundamentais', correct: true },
       { text: '22', correct: false },
       { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
     ]
   },
   {
     question: 'As ciências puras... ',
     answers: [
       { text: 'Web Dev Simplified', correct: false },
-      { text: 'Traversy Media', correct: false },
       { text: 'Dev Ed', correct: false },
       { text: 'estudam os conceitos básicos do conhecimento sem preocupação com sua imediata aplicação', correct: true }
     ]
@@ -134,14 +132,12 @@ const questions = [
     answers: [
       { text: 'Kinda', correct: false },
       { text: 'Empíricas e formais', correct: true },
-      { text: 'Um no', correct: false },
       { text: 'IDK', correct: false }
     ]
   },
   {
     question: 'Ser básico aqui significa: ',
     answers: [
-      { text: '6', correct: false },
       { text: 'estar mais interessado nos fundamentos, nas leis que regem os fenômenos físicos ou as ideias', correct: true },
       { text: 'Um no', correct: false },
       { text: 'IDK', correct: false },
@@ -152,7 +148,6 @@ const questions = [
     answers: [
       { text: '6', correct: false },
       { text: 'Cosmologia', correct: true },
-      { text: 'Um no', correct: false },
       { text: 'IDK', correct: false },
     ]
   },
@@ -162,7 +157,6 @@ const questions = [
       { text: '6', correct: false },
       { text: 'estuda a formação do universo sem preocupação explícita com aplicações práticas', correct: true },
       { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false },
     ]
   },
   {
@@ -171,7 +165,6 @@ const questions = [
       { text: '6', correct: false },
       { text: 'suas teorias precisam ser validadas pela observação de fenômenos', correct: true },
       { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false },
     ]
   },
   {
@@ -179,14 +172,12 @@ const questions = [
     answers: [
       { text: '6', correct: false },
       { text: 'ser considerada uma ciência básica, mas formal', correct: true },
-      { text: 'Um no', correct: false },
       { text: 'IDK', correct: false },
     ]
   },
   {
     question: 'Como evoluiu a Teorica do Caos?',
     answers: [
-      { text: '6', correct: false },
       { text: 'a partir de observações de fenômenos obtidos com ferramentas computacionais', correct: true },
       { text: 'Um no', correct: false },
       { text: 'IDK', correct: false },
@@ -195,7 +186,6 @@ const questions = [
   {
     question: 'Outra subárea da Computação que apresenta forte característica de ciência básica é:',
     answers: [
-      { text: '6', correct: false },
       { text: 'o estudo de sistemas multiagentes e também a área conhecida como matética computacional', correct: true },
       { text: 'Um no', correct: false },
       { text: 'IDK', correct: false },
@@ -207,7 +197,6 @@ const questions = [
       { text: '6', correct: false },
       { text: 'entender como os processos sociais ou de aprendizagem ocorrem entre seres humanos a partir da elaboração e teste de modelos computacionais que incorporam teorias que tentam explicar alguns fenômenos', correct: true },
       { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false },
     ]
   },
   {
@@ -215,7 +204,6 @@ const questions = [
     answers: [
       { text: '6', correct: false },
       { text: ' Teoria do Caos', correct: true },
-      { text: 'Um no', correct: false },
       { text: 'IDK', correct: false },
     ]
   },
@@ -225,13 +213,11 @@ const questions = [
       { text: '6', correct: false },
       { text: 'visam à realização de descobertas que possam ser imediatamente aplicadas a algum processo industrial ou assemelhado, visando produzir algum tipo de ganho', correct: true },
       { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false },
     ]
   },
   {
     question: 'A Computação muitas vezes é vista como: ',
     answers: [
-      { text: '6', correct: false },
       { text: 'o uma disciplina de engenharia', correct: true },
       { text: 'Um no', correct: false },
       { text: 'IDK', correct: false },
@@ -240,7 +226,6 @@ const questions = [
   {
     question: 'Existe a engenharia de software, a engenharia de computação e a engenharia de computadores, cada qual com um objetivo diferenciado, mas sendo que todas têm em comum: ',
     answers: [
-      { text: '6', correct: false },
       { text: 'a produção de conhecimento para aplicação em processos de produção de software, sistemas ou hardware.', correct: true },
       { text: 'Um no', correct: false },
       { text: 'IDK', correct: false },
