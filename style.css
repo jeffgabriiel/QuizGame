@@ -1,36 +1,18 @@
 @keyframes changeBackgroundColor {
     0% {
-        box-shadow: 0 3px 32px 0 rgb(247, 5, 226);
-        transition: 0.3s;
-        border: 2px solid rgb(247, 5, 226);
-        color: #f705e2;
-    }
-    25% {
         box-shadow: 0 3px 32px 0 rgb(66, 66, 248);
-        transition: 0.3s;
-        border: 2px solid rgb(66, 66, 248);
-        color: #4242f8;
-    }
-    50% {
-        box-shadow: 0 3px 32px 0  rgb(233, 236, 56);
-        transition: 0.3s;
-        border: 2px solid rgb(233, 236, 56);
-        color: #e9ec38;
-    }
-    75% {
-        box-shadow: 0 3px 32px 0  rgb(66, 66, 248);
-        transition: 0.3s;
-        border: 2px solid rgb(66, 66, 248);
-        color: #4242f8;
+        transition: 0.7s
     }
     100% {
-        box-shadow: 0 15px 32px 0 rgb(247, 5, 226);
+        box-shadow: 0 15px 32px 0 rgb(66, 66, 248);
         transition: 0.7s;
-        border: 2px solid rgb(247, 5, 226);
-        color: #f705e2;
     }
 }
-
+@keyframes btn-pisca {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
 body{
     background-color: rgb(58, 56, 56);
 }
@@ -45,21 +27,30 @@ h2{
 }
 
 .resul{
+    display: grid;
+    grid-template-rows: 40% 30% 40%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     height: 600px;
-    padding-top: 200px;
+    padding-top: 50px;
     margin: 0 20px 0 20px;
 }
+.resul img{
+    align-items: center;
+    width: 330px;
+} 
+
 h4{
     width: 100%;
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
-    color: white;
-    background-color: #4242f8;
+    color: #e9ec38;
 }
 h5{
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
-    opacity: 0.7;
+    opacity: 0.6;
     color: #e9ec38;
 }
 
@@ -84,7 +75,16 @@ h5{
     justify-content: center;
     margin-top: 5vh;
 }
-
+.logo{
+    display: grid;
+    grid-template-rows: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    margin-top: 175px;
+    width: 500px;
+}
 .left{
     background-color: rgb(233, 236, 56);
     border-radius: 150px 10px 10px 150px;
@@ -115,6 +115,13 @@ h5{
     height: 150px;
     box-shadow: 10px 10px 5px;
 }
+.botaoMaiorDireito{
+    background-color: rgb(66, 66, 248);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    box-shadow: 10px 10px 5px;
+}
 .botaoMenor{
     width: auto;
     height: 100%;
@@ -134,7 +141,7 @@ h5{
 }
 
 .rigth{
-    background-color: #f705e2;
+    background-color: rgb(233, 236, 56);
     border-radius: 10px 150px 150px 10px;
 }
 .botaoMenorRigth{
@@ -147,12 +154,8 @@ h5{
 }
 
 .center{
-    background: rgba(255, 255, 255, 0.418);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 13.5px );
-    -webkit-backdrop-filter: blur( 13.5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    background-image:url(./img/fundo.jpg);
+    border-radius: 10px 10px 10px 10px;
 }
 
 #question{
@@ -166,7 +169,7 @@ button{
     align-items: center;
 }
 #question-container{
-    margin: 0px;
+    margin: -50px 30px 50px 30px;
     height: 100%;
     display: grid;
     grid-template-rows: 30% 70%;
@@ -226,11 +229,13 @@ h1{
   }
   
   .start-btn, .next-btn {
-    margin-top: 50px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 10px 20px;
+    animation: btn-pisca 1.5s infinite;
     background-color: rgb(66, 66, 248);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    font-size: 50px;
+    color: #e9ec38;
   }
   
   .controls {
