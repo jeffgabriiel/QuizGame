@@ -1,21 +1,39 @@
 @keyframes changeBackgroundColor {
     0% {
-        background-color: rgb(247, 5, 226);
+        box-shadow: 0 3px 32px 0 rgb(247, 5, 226);
+        transition: 0.3s;
+        border: 2px solid rgb(247, 5, 226);
+        color: #f705e2;
     }
     25% {
-        background-color: rgb(66, 66, 248);
+        box-shadow: 0 3px 32px 0 rgb(66, 66, 248);
+        transition: 0.3s;
+        border: 2px solid rgb(66, 66, 248);
+        color: #4242f8;
     }
     50% {
-        background-color: rgb(233, 236, 56);
+        box-shadow: 0 3px 32px 0  rgb(233, 236, 56);
+        transition: 0.3s;
+        border: 2px solid rgb(233, 236, 56);
+        color: #e9ec38;
     }
     75% {
-        background-color: rgb(66, 66, 248);
+        box-shadow: 0 3px 32px 0  rgb(66, 66, 248);
+        transition: 0.3s;
+        border: 2px solid rgb(66, 66, 248);
+        color: #4242f8;
     }
     100% {
-        background-color: rgb(247, 5, 226);
+        box-shadow: 0 15px 32px 0 rgb(247, 5, 226);
+        transition: 0.7s;
+        border: 2px solid rgb(247, 5, 226);
+        color: #f705e2;
     }
 }
 
+body{
+    background-color: rgb(58, 56, 56);
+}
 h1{
     font-size: 30px;
     text-align: center;
@@ -24,18 +42,30 @@ h1{
 h2{
     font-size: 30px;
     text-align: center;
-    color: white;
 }
 
+.resul{
+    height: 600px;
+    padding-top: 200px;
+    margin: 0 20px 0 20px;
+}
 h4{
+    width: 100%;
     font-size: 30px;
     text-align: center;
     color: white;
     background-color: #4242f8;
 }
+h5{
+    font-size: 20px;
+    text-align: center;
+    opacity: 0.7;
+    color: #e9ec38;
+}
+
 .title{
+    margin-top: 100px;
     height: auto;
-    border: 2px solid black;
     border-radius: 10px;
     animation: changeBackgroundColor 5s infinite;
 }
@@ -57,7 +87,7 @@ h4{
 
 .left{
     background-color: rgb(233, 236, 56);
-    border-radius: 150px 0px 0px 150px;
+    border-radius: 150px 10px 10px 150px;
 }
 
 #divAll{
@@ -105,7 +135,7 @@ h4{
 
 .rigth{
     background-color: #f705e2;
-    border-radius: 0px 150px 150px 0px;
+    border-radius: 10px 150px 150px 10px;
 }
 .botaoMenorRigth{
     margin-top: 250px;
@@ -117,25 +147,33 @@ h4{
 }
 
 .center{
-    background-color: rgb(66, 66, 248);
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-.container{
-    height: 650px;
-    margin: 25px 0px 20px 90px;
-}
+
 #question{
-    font-size: 30px;
+    margin-top: 100px;
+    font-size: 40px;
     font-weight: bold;
+    align-items: center;
+    color: white;
+}
+button{
+    align-items: center;
 }
 #question-container{
-    margin: 75px 0 75px 0;
-    height: 500px;
+    margin: 0px;
+    height: 100%;
     display: grid;
     grid-template-rows: 30% 70%;
     text-align: center;
     justify-content: center;
-    
 }
+
 #question-container button{
     height: auto;
     display: grid;

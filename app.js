@@ -76,11 +76,10 @@ function selectAnswer(e) {
         document.getElementById("question-container").style.display = "none"
         document.getElementById("resultados").style.display = "block"
         document.getElementById("span").innerHTML = "" + contador + "";
-        /*
+        
         setTimeout(function(){
           window.location.reload();
         }, 10000);
-        */
       }
     }
     
