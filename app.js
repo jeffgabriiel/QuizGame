@@ -45,6 +45,7 @@ function showQuestion(question) {
     }
     button.addEventListener('click', selectAnswer)
     answerButtonsElement.appendChild(button)
+    
   })
 }
 
@@ -65,15 +66,24 @@ function selectAnswer(e) {
   })
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
+
   } else {
-    startButton.innerText = 'Restart'
+    startButton.innerText = 'Finish'
     startButton.classList.remove('hide')
     //document.location.reload(true)
-    startButton.click = true
-    console.log(contador)
-    function resultados() {
-      document.location.reload(true)
+    if(startButton.innerText === 'Finish'){
+      function resultados() {
+        document.getElementById("question-container").style.display = "none"
+        document.getElementById("resultados").style.display = "block"
+        document.getElementById("span").innerHTML = "" + contador + "";
+        /*
+        setTimeout(function(){
+          window.location.reload();
+        }, 10000);
+        */
+      }
     }
+    
     document.getElementById("start-btn").onclick = function() {
       var idOriginal = this.id;
       this.id = "start-btn";
@@ -86,6 +96,11 @@ function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
     element.classList.add('correct')
+
+    if(element.classList.value == 'correct'){
+      contador+=1
+    }
+    
   } else {
     element.classList.add('wrong')
   }
@@ -95,8 +110,6 @@ function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
 }
-
-
 
 const questions = [
   {

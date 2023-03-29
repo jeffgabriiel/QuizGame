@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Game</title>
+    <title>WazlaQUIZ</title>
     <script defer src="app.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -34,6 +34,11 @@
 
         <div class="center">
             <div class="container">
+
+                <div class="animacao" id="resultados">
+                    <h4>Pontos:  <span id="span" name="resultado"></span></h4>
+                </div>
+
                 <div id="question-container" class="hide">
 
                     <div class="animacao" id="divAll">
@@ -47,6 +52,7 @@
 
                   <div id="question"></div>
                   <div id="answer-buttons" class="btn-grid"></div>
+
                 </div>
               </div>
             </body>
@@ -80,4 +86,6 @@
 </body>
 
 <script src="app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 </html>

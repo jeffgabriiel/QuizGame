@@ -26,12 +26,18 @@ h2{
     text-align: center;
     color: white;
 }
+
+h4{
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    background-color: #4242f8;
+}
 .title{
     height: auto;
-    
     border: 2px solid black;
     border-radius: 10px;
-    animation: changeBackgroundColor 2s infinite;
+    animation: changeBackgroundColor 5s infinite;
 }
 .imagem{
     animation: quicar 0.7s cubic-bezier(.53, -0.03, .67, 1.06);
@@ -56,6 +62,12 @@ h2{
 
 #divAll{
     display: block;
+}
+#resultados{
+    display: none;
+}
+.resul h2{
+    font-size: 30px;
 }
 
 .botoes{
