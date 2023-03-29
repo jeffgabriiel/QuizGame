@@ -133,20 +133,119 @@ const questions = [
     question: 'As ciências puras podem ser ser: ',
     answers: [
       { text: 'Kinda', correct: false },
-      { text: 'Empíricas e formais.', correct: true },
+      { text: 'Empíricas e formais', correct: true },
       { text: 'Um no', correct: false },
       { text: 'IDK', correct: false }
     ]
   },
   {
-    question: 'What is 4 * 2?',
+    question: 'Ser básico aqui significa: ',
     answers: [
       { text: '6', correct: false },
-      { text: '8', correct: true },
+      { text: 'estar mais interessado nos fundamentos, nas leis que regem os fenômenos físicos ou as ideias', correct: true },
       { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
+      { text: 'IDK', correct: false },
     ]
-  }
+  },
+  {
+    question: 'É considerada uma ciência básica por excelência',
+    answers: [
+      { text: '6', correct: false },
+      { text: 'Cosmologia', correct: true },
+      { text: 'Um no', correct: false },
+      { text: 'IDK', correct: false },
+    ]
+  },
+  {
+    question: 'A cosmologia',
+    answers: [
+      { text: '6', correct: false },
+      { text: 'estuda a formação do universo sem preocupação explícita com aplicações práticas', correct: true },
+      { text: 'Um no', correct: false },
+      { text: 'IDK', correct: false },
+    ]
+  },
+  {
+    question: 'A cosmologia é considerada uma ciência empírica pois:',
+    answers: [
+      { text: '6', correct: false },
+      { text: 'suas teorias precisam ser validadas pela observação de fenômenos', correct: true },
+      { text: 'Um no', correct: false },
+      { text: 'IDK', correct: false },
+    ]
+  },
+  {
+    question: 'A Lógica pode também:',
+    answers: [
+      { text: '6', correct: false },
+      { text: 'ser considerada uma ciência básica, mas formal', correct: true },
+      { text: 'Um no', correct: false },
+      { text: 'IDK', correct: false },
+    ]
+  },
+  {
+    question: 'Como evoluiu a Teorica do Caos?',
+    answers: [
+      { text: '6', correct: false },
+      { text: 'a partir de observações de fenômenos obtidos com ferramentas computacionais', correct: true },
+      { text: 'Um no', correct: false },
+      { text: 'IDK', correct: false },
+    ]
+  },
+  {
+    question: 'Outra subárea da Computação que apresenta forte característica de ciência básica é:',
+    answers: [
+      { text: '6', correct: false },
+      { text: 'o estudo de sistemas multiagentes e também a área conhecida como matética computacional', correct: true },
+      { text: 'Um no', correct: false },
+      { text: 'IDK', correct: false },
+    ]
+  },
+  {
+    question: 'Qual é o objetivo destas subáreas?',
+    answers: [
+      { text: '6', correct: false },
+      { text: 'entender como os processos sociais ou de aprendizagem ocorrem entre seres humanos a partir da elaboração e teste de modelos computacionais que incorporam teorias que tentam explicar alguns fenômenos', correct: true },
+      { text: 'Um no', correct: false },
+      { text: 'IDK', correct: false },
+    ]
+  },
+  {
+    question: 'Um exemplo de pesquisa básica que só veio a produzir aplicações práticas posteriormente:',
+    answers: [
+      { text: '6', correct: false },
+      { text: ' Teoria do Caos', correct: true },
+      { text: 'Um no', correct: false },
+      { text: 'IDK', correct: false },
+    ]
+  },
+  {
+    question: 'As ciências aplicadas...',
+    answers: [
+      { text: '6', correct: false },
+      { text: 'visam à realização de descobertas que possam ser imediatamente aplicadas a algum processo industrial ou assemelhado, visando produzir algum tipo de ganho', correct: true },
+      { text: 'Um no', correct: false },
+      { text: 'IDK', correct: false },
+    ]
+  },
+  {
+    question: 'A Computação muitas vezes é vista como: ',
+    answers: [
+      { text: '6', correct: false },
+      { text: 'o uma disciplina de engenharia', correct: true },
+      { text: 'Um no', correct: false },
+      { text: 'IDK', correct: false },
+    ]
+  },
+  {
+    question: 'Existe a engenharia de software, a engenharia de computação e a engenharia de computadores, cada qual com um objetivo diferenciado, mas sendo que todas têm em comum: ',
+    answers: [
+      { text: '6', correct: false },
+      { text: 'a produção de conhecimento para aplicação em processos de produção de software, sistemas ou hardware.', correct: true },
+      { text: 'Um no', correct: false },
+      { text: 'IDK', correct: false },
+    ]
+  },
 ]
 
 
