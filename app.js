@@ -6,6 +6,23 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 
 let shuffledQuestions, currentQuestionIndex
 
+function meuMenuToggle() {
+  var x = document.getElementById("divAll");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function meuMenuToggle2() {
+  var x = document.getElementById("divAll");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
@@ -56,12 +73,15 @@ function selectAnswer(e) {
   })
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
+    
   } else {
     startButton.innerText = 'Restart'
     startButton.classList.remove('hide')
+    document.location.reload(true)
   }
 }
 
+var contador = 0
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
@@ -114,3 +134,5 @@ const questions = [
     ]
   }
 ]
+
+
