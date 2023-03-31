@@ -6,6 +6,9 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 var contador = 0
 let shuffledQuestions, currentQuestionIndex
 
+let somAcerto = document.querySelector('#somAcerto')
+let somErro = document.querySelector('#somErro')
+
 function meuMenuToggle() {
   var x = document.getElementById("divAll");
   if (x.style.display === "none") {
@@ -76,11 +79,12 @@ function selectAnswer(e) {
         document.getElementById("question-container").style.display = "none"
         document.getElementById("resultados").style.display = "block"
         document.getElementById("span").innerHTML = "" + contador + "";
-        /*
-        setTimeout(function(){
-          window.location.reload();
-        }, 1000);
-        */
+        
+        document.querySelector('#aplausos').play()
+
+        //setTimeout(function(){
+          //window.location.reload();
+        //}, 20000);
       }
     }
     
@@ -99,10 +103,16 @@ function setStatusClass(element, correct) {
 
     if(element.classList.value == 'correct'){
       contador+=1
+      somAcerto.play()
     }
     
   } else {
     element.classList.add('wrong')
+
+    if(element.classList.value == 'wrong'){
+      somErro.play()
+    }
+
   }
 }
 
