@@ -82,9 +82,14 @@ function selectAnswer(e) {
         
         document.querySelector('#aplausos').play()
 
-        //setTimeout(function(){
+        var contRegreessiva = 10
+        setTimeout(function(){
+          while(contRegreessiva >= 0){
+            console.log(contRegreessiva)
+            contRegreessiva--
+          }
           //window.location.reload();
-        //}, 20000);
+        }, 20000);
       }
     }
     
