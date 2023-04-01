@@ -6,6 +6,9 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 var contador = 0
 let shuffledQuestions, currentQuestionIndex
 
+let somAcerto = document.querySelector('#somAcerto')
+let somErro = document.querySelector('#somErro')
+
 function meuMenuToggle() {
   var x = document.getElementById("divAll");
   if (x.style.display === "none") {
@@ -76,11 +79,12 @@ function selectAnswer(e) {
         document.getElementById("question-container").style.display = "none"
         document.getElementById("resultados").style.display = "block"
         document.getElementById("span").innerHTML = "" + contador + "";
-        /*
-        setTimeout(function(){
-          window.location.reload();
-        }, 1000);
-        */
+        
+        document.querySelector('#aplausos').play()
+
+        //setTimeout(function(){
+          //window.location.reload();
+        //}, 20000);
       }
     }
     
@@ -99,10 +103,16 @@ function setStatusClass(element, correct) {
 
     if(element.classList.value == 'correct'){
       contador+=1
+      somAcerto.play()
     }
     
   } else {
     element.classList.add('wrong')
+
+    if(element.classList.value == 'wrong'){
+      somErro.play()
+    }
+
   }
 }
 
@@ -113,127 +123,125 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'Ciências puras também pode ser chamada de: ',
+    question: 'Qual é uma das ferramentas usuais dos cientistas de acordo com Wazlawick?',
     answers: [
-      { text: 'Ciências fundamentais', correct: true },
-      { text: '22', correct: false },
-      { text: 'Um no', correct: false },
+      { text: 'Análise', correct: true },
+      { text: 'Síntese', correct: false },
+      { text: 'Intuição', correct: false },
     ]
   },
   {
-    question: 'As ciências puras... ',
+    question: 'Segundo Wazlawick, qual é o objeto de estudo das ciências sociais?',
     answers: [
-      { text: 'Web Dev Simplified', correct: false },
-      { text: 'Dev Ed', correct: false },
-      { text: 'estudam os conceitos básicos do conhecimento sem preocupação com sua imediata aplicação', correct: true }
+      { text: 'As ideias', correct: false },
+      { text: 'Os fenômenos que ocorrem no mundo real', correct: false },
+      { text: 'Os aspectos das relações humanas', correct: true }
     ]
   },
   {
-    question: 'As ciências puras podem ser ser: ',
+    question: 'De acordo com Wazlawick, quais são os exemplos de ciências empíricas?',
     answers: [
-      { text: 'Kinda', correct: false },
-      { text: 'Empíricas e formais', correct: true },
-      { text: 'IDK', correct: false }
-    ]
-  },
-  /*
-  {
-    question: 'Ser básico aqui significa: ',
-    answers: [
-      { text: 'estar mais interessado nos fundamentos, nas leis que regem os fenômenos físicos ou as ideias', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false },
+      { text: 'Lógica, Matemática e Estatística', correct: false },
+      { text: 'Astronomia, Física e Biologia', correct: true },
+      { text: 'Sociologia, Psicologia e Política', correct: false }
     ]
   },
   {
-    question: 'É considerada uma ciência básica por excelência',
+    question: 'Qual é o foco das ciências puras, de acordo com Wazlawick?',
     answers: [
-      { text: '6', correct: false },
-      { text: 'Cosmologia', correct: true },
-      { text: 'IDK', correct: false },
+      { text: 'Estudar conceitos básicos sem aplicação imediata', correct: true },
+      { text: 'Descobrir novas tecnologias aplicáveis à indústria', correct: false },
+      { text: 'Estudar conceitos básicos com aplicação imediata', correct: false },
     ]
   },
   {
-    question: 'A cosmologia',
+    question: 'Qual é o objetivo das ciências aplicadas, segundo Wazlawick?',
     answers: [
-      { text: '6', correct: false },
-      { text: 'estuda a formação do universo sem preocupação explícita com aplicações práticas', correct: true },
-      { text: 'Um no', correct: false },
+      { text: 'Descobrir conceitos básicos do conhecimento', correct: false },
+      { text: 'Estudar sistemas multiagentes', correct: false },
+      { text: 'Realizar descobertas aplicáveis imediatamente à indústria', correct: true },
     ]
   },
   {
-    question: 'A cosmologia é considerada uma ciência empírica pois:',
+    question: 'De acordo com Wazlawick (2010), a Ciência da Computação normalmente é classificada entre as ciências exatas. Quais são as características das ciências exatas?',
     answers: [
-      { text: '6', correct: false },
-      { text: 'suas teorias precisam ser validadas pela observação de fenômenos', correct: true },
-      { text: 'Um no', correct: false },
+      { text: 'Os resultados são imprecisos e imprevisíveis', correct: false },
+      { text: 'As leis são altamente preditivas e previsíveis', correct: true },
+      { text: 'As leis são altamente subjetivas e imprecisas', correct: false },
     ]
   },
   {
-    question: 'A Lógica pode também:',
+    question: 'Segundo Wazlawick (2010), a Computação possui uma subárea que é considerada uma ciência inexata. Qual é essa subárea?',
     answers: [
-      { text: '6', correct: false },
-      { text: 'ser considerada uma ciência básica, mas formal', correct: true },
-      { text: 'IDK', correct: false },
+      { text: 'Inteligência Artificial', correct: false },
+      { text: 'Redes de Computadores', correct: false },
+      { text: 'Algoritmos Genéticos', correct: true },
     ]
   },
   {
-    question: 'Como evoluiu a Teorica do Caos?',
+    question: 'Qual é a definição de "ciências duras" de acordo com Wazlawick?',
     answers: [
-      { text: 'a partir de observações de fenômenos obtidos com ferramentas computacionais', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false },
+      { text: 'As ciências que não usam rigor científico em suas observações e deduções', correct: false },
+      { text: 'As ciências que usam de rigor científico em suas observações, experimentos e deduções', correct: true },
+      { text: 'As ciências que dependem de dados anedotais para comprovar seus experimentos', correct: false },
     ]
   },
   {
-    question: 'Outra subárea da Computação que apresenta forte característica de ciência básica é:',
+    question: 'Qual das afirmações abaixo é verdadeira sobre as ciências idiográficas?',
     answers: [
-      { text: 'o estudo de sistemas multiagentes e também a área conhecida como matética computacional', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false },
+      { text: 'Analisam fenômenos únicos que não se repetem, mas têm validade como campo de estudo', correct: true },
+      { text: 'Estudam fenômenos que se repetem e permitem fazer previsões', correct: false },
+      { text: 'Analisam fenômenos únicos que não se repetem, mas não têm validade como campo de estudo', correct: false },
     ]
   },
   {
-    question: 'Qual é o objetivo destas subáreas?',
+    question: 'Qual a importância do método científico na Computação, segundo Wazlawick?',
     answers: [
-      { text: '6', correct: false },
-      { text: 'entender como os processos sociais ou de aprendizagem ocorrem entre seres humanos a partir da elaboração e teste de modelos computacionais que incorporam teorias que tentam explicar alguns fenômenos', correct: true },
-      { text: 'Um no', correct: false },
+      { text: 'O método científico é fundamental na Computação para explicar os dados coletados de maneira mais provável', correct: true },
+      { text: 'O método científico não é relevante na Computação porque os dados não precisam ser explicados', correct: false },
+      { text: 'O método científico é importante porque a coleta de dados é a única atividade relevante na Computação', correct: false },
     ]
   },
   {
-    question: 'Um exemplo de pesquisa básica que só veio a produzir aplicações práticas posteriormente:',
+    question: 'Qual a visão do pragmatismo sobre a descrição da realidade pela Ciência?',
     answers: [
-      { text: '6', correct: false },
-      { text: ' Teoria do Caos', correct: true },
-      { text: 'IDK', correct: false },
+      { text: 'Os pragmáticos assumem que não é possível saber exatamente o que é a realidade e que assim, a Ciência explica apenas os fenômenos observados e suas previsões são consistentes e úteis', correct: true },
+      { text: 'Os pragmáticos assumem que é possível saber exatamente o que é a realidade e que assim, a Ciência explica apenas os fenômenos observados', correct: false },
+      { text: 'Os realistas defendem que a Ciência, de fato, descreve a realidade', correct: false },
     ]
   },
   {
-    question: 'As ciências aplicadas...',
+    question: 'Qual é o critério de objetividade em Ciência, de acordo com Wazlawick (2010)?',
     answers: [
-      { text: '6', correct: false },
-      { text: 'visam à realização de descobertas que possam ser imediatamente aplicadas a algum processo industrial ou assemelhado, visando produzir algum tipo de ganho', correct: true },
-      { text: 'Um no', correct: false },
+      { text: 'O critério de objetividade leva em consideração as opiniões em Ciência, mesmo que sejam subjetivas', correct: false },
+      { text: 'O critério de objetividade exclui as opiniões em Ciência, porque são subjetivas e dependem da experiência, caráter e motivação das pessoas que as emitem', correct: true },
+      { text: 'O critério de objetividade considera as opiniões em Ciência apenas se forem emitidas por pessoas com autoridade na área', correct: false },
     ]
   },
   {
-    question: 'A Computação muitas vezes é vista como: ',
+    question: 'Qual é o princípio da indução segundo Wazlawick?',
     answers: [
-      { text: 'o uma disciplina de engenharia', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false },
+      { text: 'Indução natural só pode ser aplicada como princípio científico independentemente de outros conhecimentos e observações feitas', correct: false },
+      { text: 'Uma situação que se sustenta em todos os casos observados se sustenta em todos os casos, até prova em contrário', correct: true },
+      { text: 'O método científico não sustenta a ideia de que uma situação que se sustenta em todos os casos observados se sustenta em todos os casos, até prova em contrário', correct: false },
     ]
   },
   {
-    question: 'Existe a engenharia de software, a engenharia de computação e a engenharia de computadores, cada qual com um objetivo diferenciado, mas sendo que todas têm em comum: ',
+    question: 'Quanto à natureza, como podemos classificar os tipos de pesquisa segundo Wazlawick?',
     answers: [
-      { text: 'a produção de conhecimento para aplicação em processos de produção de software, sistemas ou hardware.', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false },
+      { text: 'Descritiva e documental', correct: false },
+      { text: 'Original e bibliográfica', correct: false },
+      { text: 'Original e survey', correct: true },
     ]
   },
-  */
+  {
+    question: 'Quanto aos objetivos, qual é a diferença entre a pesquisa exploratória e a explicativa, segundo Wazlawick?',
+    answers: [
+      { text: 'A pesquisa exploratória busca explicar as causas e explicações dos dados, enquanto a explicativa não tem uma hipótese ou objetivo definido em mente', correct: false },
+      { text: 'A pesquisa exploratória não necessariamente tem uma hipótese ou objetivo definido em mente, enquanto a explicativa busca analisar os dados observados e suas causas e explicações', correct: false },
+      { text: 'A pesquisa exploratória busca dados consistentes sobre uma determinada realidade, enquanto a explicativa não tem uma hipótese ou objetivo definido em mente', correct: true },
+    ]
+  },
 ]
 
 
