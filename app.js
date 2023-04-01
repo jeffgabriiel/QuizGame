@@ -82,13 +82,15 @@ function selectAnswer(e) {
         
         document.querySelector('#aplausos').play()
 
-        var contRegreessiva = 10
+        var n = 20;
+        var contRegreessiva = document.getElementById("contRegreessiva");
+        window.setInterval(function(){
+          contRegreessiva.innerHTML = n;
+          n--;
+        },1000);
+
         setTimeout(function(){
-          while(contRegreessiva >= 0){
-            console.log(contRegreessiva)
-            contRegreessiva--
-          }
-          //window.location.reload();
+          window.location.reload();
         }, 20000);
       }
     }
